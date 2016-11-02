@@ -59,7 +59,7 @@ RSpec.configure do |config|
     /\lib\d*\/ruby\//,
     /bin\//,
     /gems/,
-    /spec\/spec_helper\.rb/
+    /spec\/spec_helper\.rb/,
     /lib\/rspec\/(core|expectation|matchers|mocks)/
   ]
 end
