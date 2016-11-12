@@ -7,4 +7,7 @@ class Exercise < ApplicationRecord
   validates :duration_in_min, numericality: { greater_than: 0.0 }
   validates :Workout_Details, presence: true
   validates :Activity_Date, presence: true
+  
+  default_scope { where('workout_date > ?', 7.days.ago)
+                  .order(workout_date: :desc) }
 end
