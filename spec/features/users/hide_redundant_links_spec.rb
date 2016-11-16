@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.feature "Hide sign in and sign up links while logged in" do
   before do
-    @john = User.create(email: "john@exmaple.com", password: "password")
+    @john = User.create(first_name: "John", last_name: "Doe", email: "john@exmaple.com", password: "password")
   end
   
   scenario "upon successful sign in" do
