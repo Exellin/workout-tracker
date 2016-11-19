@@ -14,6 +14,11 @@ RSpec.feature "Users singup" do
     
     visit "/"
     expect(page).to have_content("John Smith")
+    
+    user = User.last
+    room = user.room
+    room_name = user.full_name.split.join('-')
+    expect(room.name).to eq(room_name)
   end
   
   scenario "with invalid credentials" do
